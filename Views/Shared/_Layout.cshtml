@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="~/css/hom_e.css"> <!-- Путь к вашему CSS файлу -->
+</head>
+<body>
+    <!-- Header -->
+    <header style="font-size: 25px;">
+        <!-- Логотип компании -->
+        <div>
+            <!--<img src="~/img/logo.png" alt="Logo" style="width: 250px; height: auto; margin-right: 100px;">-->
+            <!-- Создаем ссылку с изображением внутри -->
+            <a asp-area="" asp-controller="Home" asp-action="Index" style="display: inline-block;">
+                <img src="~/img/logo.png" alt="Logo" style="width: 250px; height: auto; margin-right: 100px;">
+            </a>
+
+        </div>
+
+        <!-- Основное содержимое (секции и кнопки) -->
+        <div class="main-content">
+            <div class="button-container">
+                <a class="button" asp-area="" asp-controller="Home" asp-action="Index">Домой</a>
+                <a class="button" asp-area="" asp-controller="Car" asp-action="Index">Каталог</a>
+                <!--<a class="button" asp-area="" asp-controller="Purchase" asp-action="Index">Продажа</a>-->
+                <a class="button" asp-area="" asp-controller="AboutUs" asp-action="Index">О нас</a>
+            </div>
+        </div>
+
+        <!-- Пример кнопки "Выход" -->
+        <a href="/Auth/Logout" class="exit-button">Выход</a>
+
+    </header>
+
+    <!-- Основной контент страницы -->
+    <main>
+        @RenderBody()
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div>
+            <p>Контактный телефон: +1 (160) 536-7798</p>
+            <p>Адрес: 16 Science Street, New-York, USA</p>
+        </div>
+        <!-- Иконки контактов -->
+        <div>
+            <!-- Здесь добавьте иконки для контактов, например, иконки социальных сетей -->
+        </div>
+    </footer>
+</body>
+</html>

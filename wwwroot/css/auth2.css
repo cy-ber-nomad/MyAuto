@@ -1,0 +1,91 @@
+﻿body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('../img/backgroundphoto2.jpg');
+    background-size: cover; /* Масштабирование изображения, чтобы оно полностью покрыло фон */
+    background-position: center; /* Расположение изображения по центру */
+}
+
+.login-container {
+    width: 320px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+button.google-button, button.facebook-button, button.apple-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+}
+
+button.google-button {
+    background-color: #DB4437; /* Google Red */
+}
+
+button.facebook-button {
+    background-color: #4267B2; /* Facebook Blue */
+}
+
+button.apple-button {
+    background-color: #000; /* Apple Black */
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"], input[type="password"] {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007BFF; /* Bootstrap Primary Blue */
+    color: #fff;
+    cursor: pointer;
+}
+
+.alert-danger {
+    position: absolute;
+    left: 50%; /* Располагаем по центру горизонтально */
+    transform: translateX(-50%); /* Центрируем относительно родительского элемента */
+    z-index: 1; /* Устанавливаем z-index, чтобы сообщение было поверх других элементов */
+    width: 200px; /* Ширина сообщения */
+    padding: 10px;
+    background-color: #f8d7da; /* Цвет фона для сообщения об ошибке (красный) */
+    border: 1px solid #f5c6cb; /* Обрамление для сообщения об ошибке */
+    border-radius: 5px; /* Скругление углов */
+    text-align: center; /* Выравнивание текста по центру */
+}

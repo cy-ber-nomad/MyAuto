@@ -1,0 +1,130 @@
+﻿@model List<MyAuto.Models.Car>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Details</title>
+    <link rel="stylesheet" href="/css/car.css">
+</head>
+<body>
+    <div class="tema">
+        @foreach (var car in Model)
+        {
+            <div class="car-card">
+                <img src="@car.ImagePath" alt="Car Image" class="car-image">
+                <h2>@car.Name</h2>
+                <div id="car-details-@car.Id" class="car-details">
+                    <h3>Model: @car.Model</h3>
+                    <h3>Price: @car.Price $</h3>
+                    <!-- Скрытые детали, которые будут показываться только в модальном окне -->
+                    <div class="hidden">
+                        <p>Description: @car.Description</p>
+                        <p>Speed: @car.Speed</p>
+                        <p>Create Date: @car.CreateDate.ToShortDateString()</p>
+                        <p>Type: @car.Type</p>
+                    </div>
+                </div>
+
+                <div class="buttons" style="font-family: 'Arial', sans-serif;">
+                    <button class="info-btn" onclick="showCarDetails('@car.Id')">Инфо</button>
+                    <a class="buy-btn" asp-area="" asp-controller="Purchase" asp-action="Index">Купить</a>
+                </div>
+            </div>
+        }
+
+    </div>
+
+
+
+    <div id="modal-bg" class="modal-bg">
+        <div id="modal-content" class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-body" class="modal-body"></div>
+        </div>
+    </div>
+
+
+    <style>
+        /* Стили для тега <a> (ссылки, выглядящей как кнопка) */
+        a.buy-btn {
+            display: inline-block;
+            padding: 3px 7px;
+            margin: 0 5px;
+            background-color: #4CAF50; /* Зеленый цвет фона */
+            color: white; /* Белый цвет текста */
+            text-decoration: none; /* Убираем подчеркивание ссылки */
+            border: 2px solid #4CAF50; /* Зеленая граница */
+            border-radius: 5px; /* Закругленные углы */
+            transition: opacity 0.3s ease; /* Плавное изменение непрозрачности при наведении */
+        }
+
+            /* При наведении меняем яркость */
+            a.buy-btn:hover {
+                opacity: 0.7; /* Уменьшаем яркость при наведении */
+            }
+
+        /* Стили для модального окна */
+        .modal-bg {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999; /* Помещаем окно поверх остального контента */
+        }
+
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            max-width: 80%;
+            overflow: auto;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .modal-body {
+            margin-top: 20px;
+        }
+
+        /* Стили для скрытия содержимого вне модального окна */
+        .car-details .hidden {
+            display: none; /* Скрываем содержимое с классом .hidden в пределах .car-details */
+        }
+    </style>
+
+
+    <script>
+        function showCarDetails(carId) {
+            var modalBg = document.getElementById('modal-bg');
+            var modalBody = document.getElementById('modal-body');
+            var carDetails = document.getElementById('car-details-' + carId).innerHTML;
+            modalBody.innerHTML = carDetails;
+            modalBg.style.display = 'block';
+        }
+
+        function closeModal() {
+            var modalBg = document.getElementById('modal-bg');
+            modalBg.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,107 @@
+﻿@{
+    ViewData["Title"] = "About Us";
+}
+<style>
+
+    .info-container {
+        text-align: center;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 80%;
+        margin-top: 100px; /* Равный отступ сверху */
+        margin-bottom: 100px; /* Равный отступ снизу */
+        margin-left: auto; 
+        margin-right:auto; 
+    }
+
+    .owner-info, .site-info {
+        margin-left: auto;
+        margin-right: auto;
+        font-style: italic;
+        font-weight: bold;
+        font-size: 24px;
+        margin: 100px;
+    }
+
+    .text {
+        font-style: italic;
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 80%;
+        margin-top: 100px; /* Равный отступ сверху */
+        margin-bottom: 100px; /* Равный отступ снизу */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .line {
+        width: 100%;
+        height: 2px;
+        background-color: black;
+        margin: 20px 0;
+    }
+
+    .butt-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+
+
+    .button-refuse {
+        background-color: #ff0000;
+        color: white;
+    }
+
+    .button-accept {
+        background-color: #007bff;
+        color: white;
+    }
+</style>
+<body>
+    <div style="font-size: 25px; ">
+        <div class="owner-info">
+            Owner:                Джафарли Рауль<br>
+            Co-owner:             Алиев Балабек 
+        </div>
+
+        <div class="text">
+            <h2> Проект: Веб-сайт "MyAuto" для продажи автомобилей </h2>
+            <br>
+            <h4>Добро пожаловать на наш сайт продажи автомобилей! Меня зовут Рауль, и сегодня я хочу рассказать вам о нашем школьном проекте, в рамках которого мы с учителем создали удивительный веб-сайт для продажи автомобилей под названием "MyAuto".
+            На начальном этапе мы собрались и обсудили идею создания онлайн площадки для продажи автомобилей. Каждый из нас внес свои предложения по дизайну и функциональности сайта. С учителем мы определили основные разделы и функции, которые мы хотели бы реализовать.
+            Затем мы приступили к созданию веб-сайта. Мы изучили основы веб-разработки, включая HTML, CSS и JavaScript. С помощью учителя мы создали красивый интерфейс, который включал страницы каталога автомобилей, информацию о каждом автомобиле, 
+            возможность оформления заказа и просмотра подробностей о продажах.
+            Один из самых интересных этапов проекта было создание базы данных. Мы изучили основы работы с базами данных и настроили связь между веб-сайтом и базой данных, чтобы пользователи могли просматривать и покупать автомобили онлайн.
+            После завершения работы над проектом мы провели презентацию перед классом, показывая работу нашего веб-сайта. Мы были рады, что наш учитель и одноклассники оценили нашу работу и дали полезные отзывы.
+            Этот проект помог нам понять основы веб-разработки и создания онлайн платформы для продажи товаров. Мы благодарны нашему учителю за поддержку и помощь в освоении новых навыков!
+            Спасибо за внимание, и не забудьте заглянуть на наш веб-сайт "MyAuto", чтобы увидеть наши достижения!
+            </h4>
+        </div>
+
+        
+
+        <div class="line"></div>
+
+
+        <div class="info-container">
+            <div class="site-info">
+                "I am Jafarli Raul and am the complete owner of this site. This site was created in January 2024 and
+                has been updated until today. Any attempts to copy or use this site without my consent will result in legal action."
+            </div>
+            <div class="butt-container">
+                <button class="button button-refuse">I Refuse</button>
+                <button class="button button-accept">I Accept</button>
+            </div>
+        </div>
+    </div>
+</body>

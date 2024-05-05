@@ -1,0 +1,82 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.left-section {
+    flex: 2;
+    display: flex;
+    justify-content: center; /* Элементы равномерно распределяются по контейнеру */
+    align-items: center;
+}
+
+    .left-section img {
+        max-width: 100%;
+        height: 100%;
+    }
+
+.middle-section {
+    flex: 1;
+    padding: 20px;
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start; /* Элементы равномерно распределяются по контейнеру */
+    align-items: center;
+    background-color: #e0e0e0;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    margin: 10px 0;
+}
+
+.right-section {
+    flex: 1;
+    padding: 20px;
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start; /* Элементы равномерно распределяются по контейнеру */
+    align-items: center;
+    background-color: #d0d0d0;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* Убираем маркеры списка и задаем отступы */
+.bullet-list {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0;
+    margin: 0;
+}
+
+/* Стиль для каждого элемента списка */
+.bullet-list li::before {
+    content: "\2022"; /* Юникодный символ для круглого буллета */
+    color: black; /* Цвет кружочка */
+    font-size: 14px; /* Размер шрифта кружочка */
+    margin-right: 5px; /* Отступ между кружочком и текстом */
+}
+

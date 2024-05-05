@@ -1,0 +1,75 @@
+﻿
+/* Сброс отступов для body */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/backgroundphoto2.jpg');
+    background-size: cover; /* Масштабирование изображения, чтобы оно полностью покрыло фон */
+    background-position: center; /* Расположение изображения по центру */
+}
+
+/* Стили для header */
+header {
+    background-color: #1b6ec2;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 0; /* Убираем отступ снизу у header */
+}
+
+/* Стили для footer */
+footer {
+    background-color: #1b6ec2;
+    color: white;
+    padding: 20px;
+    margin-top: 0; /* Убираем отступ сверху у footer */
+}
+
+/* Стили для main-content */
+.main-content {
+    max-width: 50%; /* Ширина main-content по желанию */
+}
+
+/*кнопка выхода*/
+.exit-button {
+    padding: 10px 20px;
+    background-color: white;
+    color: #007bff; /* Синий цвет текста */
+    border: 2px solid #007bff; /* Синяя граница */
+    border-radius: 20px; /* Скругленные углы */
+    font-family: 'Arial', sans-serif; /* Задаем интересный шрифт */
+    font-style: italic; /* Наклонный стиль текста */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+    .exit-button:hover {
+        background-color: #007bff;
+        color: white;
+    }
+
+
+/* Стили для button-container */
+.button-container {
+    display: flex;
+    justify-content: center; /* Выравнивание кнопок по центру по горизонтали */
+}
+
+.button {
+    background-color: transparent; /* Прозрачный фон кнопки */
+    color: white; /* Белый цвет текста */
+    border: none; /* Убираем границы кнопки */
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    font-family: 'Arial', sans-serif; /* Задаем интересный шрифт */
+    font-style: italic; /* Наклонный стиль текста */
+    margin: 0 10px; /* Отступы между кнопками */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+
+    /* Стили для кнопок при наведении */
+    .button:hover {
+        background-color: #0056b3;
+    }
